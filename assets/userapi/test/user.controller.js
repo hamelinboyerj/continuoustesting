@@ -31,16 +31,11 @@ describe('User', () => {
       })
     })
 
-     it('avoid creating an existing user', (done)=> {
-       const user = {
-         username: 'sergkudinov'
-       }
-       
-       userController.create(user, (err,result)) => {
-         expect(err).to.not.be.equall(null)
-         expect(result).to.be.equall('WHO')
-         done()
-       })
+
+      // userController.create(user, (err,result)) => {
+      //   expect(err).to.not.be.equall(null)
+      //   expect(result).to.be.equall('WHO')
+      //   done()
     //   // TODO create this test
     //   // Warning: the user already exists
 
@@ -63,4 +58,3 @@ describe('User', () => {
   //   })
   //
   // })
-})

@@ -10,4 +10,10 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: cd /assets/userapi | npm run test
+      - run: npm ci
+        working-directory: ./continuoustesting/assets/userapi 
+      - run: npm start
+        working-directory: ./continuoustesting/assets/userapi 
+      - run: npm run test
+        working-directory: ./continuoustesting/assets/userapi 
+ 
